@@ -1,0 +1,48 @@
+version: '3'
+
+networks:
+   test-network:
+
+services:
+    nginx-service:
+        image: nginx:stable-alpine
+        container_name: nginx-container
+        ports:
+          - "8080:80"
+        volumes:
+          - ./app:/var/www/project
+          - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        networks:
+          - test-network
+        depends_on:
+          - php-service
+          - postgresql-service
+
+    php-service:
+      build:
+         context: .
+         dockerfile: ./docker/php/Dockerfile
+      container_name: php-container
+      ports:
+        - "9000:9000"
+      volumes:
+        - ./app:/var/www/project
+      networks:
+        - test-network
+
+
+    postgresql-service:
+      image: postgres
+      restart: always
+      volumes:
+        - ./db:/var/lib/postgresql
+      ports:
+          - "5432:5432"
+      environment:
+          POSTGRES_USER: pguser
+          POSTGRES_PASSWORD: pguser
+          POSTGRES_DB: pgdb
+
+      networks:
+        - test-network
+
