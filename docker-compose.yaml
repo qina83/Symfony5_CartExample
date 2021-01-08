@@ -27,6 +27,7 @@ services:
         - "9000:9000"
       volumes:
         - ./app:/var/www/project
+        - ./log:/var/log
       networks:
         - test-network
 
@@ -40,7 +41,7 @@ services:
           - "5432:5432"
       environment:
           POSTGRES_USER: pguser
-          POSTGRES_PASSWORD: pguser
+          POSTGRES_PASSWORD: pgpwd
           POSTGRES_DB: pgdb
 
       networks:

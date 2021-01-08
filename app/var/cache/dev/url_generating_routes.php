@@ -5,9 +5,5 @@
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
     'app_cart_getcart' => [['uid'], ['_controller' => 'App\\Controller\\CartController::getCart'], [], [['variable', '/', '[^/]++', 'uid', true], ['text', '/cart']], [], []],
-    'app_getandpost_getall' => [[], ['_controller' => 'App\\Controller\\GetAndPost::getAll'], [], [['text', '/giveMeAll']], [], []],
-    'app_getandpost_getone' => [['id'], ['_controller' => 'App\\Controller\\GetAndPost::getOne'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/giveMeOne']], [], []],
-    'app_getandpost_takeone' => [['id'], ['_controller' => 'App\\Controller\\GetAndPost::takeOne'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/takeOne']], [], []],
-    'app_getandpost_updateone' => [['id'], ['_controller' => 'App\\Controller\\GetAndPost::updateOne'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/updateOne']], [], []],
-    'app_getandpost_takeall' => [[], ['_controller' => 'App\\Controller\\GetAndPost::takeAll'], [], [['text', '/takeAll']], [], []],
+    'app_cart_addproduct' => [['uid'], ['_controller' => 'App\\Controller\\CartController::addProduct'], [], [['variable', '/', '[^/]++', 'uid', true], ['text', '/cart']], [], []],
 ];

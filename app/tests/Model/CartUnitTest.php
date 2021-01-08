@@ -4,7 +4,7 @@ namespace App\Tests\Shopping;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use App\Model\Cart;
+use App\Entity\Cart;
 
 class CartUnitTest extends TestCase
 {
