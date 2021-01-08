@@ -374,6 +374,24 @@ private static $installed = array (
       ),
       'reference' => 'e70aa8b064c5b72d3df2abd5ab1e90464ad009de',
     ),
+    'symfony/property-access' => 
+    array (
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '243dcdda2f276cb31efa31a015d0fdb5076931ce',
+    ),
+    'symfony/property-info' => 
+    array (
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f65694a05eb7742c5f2951f20676de367ffaaaea',
+    ),
     'symfony/routing' => 
     array (
       'pretty_version' => 'v5.2.1',
@@ -382,6 +400,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '934ac2720dcc878a47a45c986b483a7ee7193620',
+    ),
+    'symfony/serializer' => 
+    array (
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4af81510bb603a6d255691a88e118add2bba6337',
     ),
     'symfony/service-contracts' => 
     array (

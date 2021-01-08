@@ -1,7 +1,7 @@
 <?php return array (
   0 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController',
-  1 => 'App\\Controller\\GetAndPost',
-  2 => 'App\\Controller\\Lucky',
+  1 => 'App\\Controller\\CartController',
+  2 => 'App\\Controller\\GetAndPost',
   4 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver',
   5 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController',
   6 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController',

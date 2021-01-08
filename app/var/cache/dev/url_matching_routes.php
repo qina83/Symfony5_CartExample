@@ -14,19 +14,24 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
-                .'|/giveMeOne/([^/]++)(*:61)'
-                .'|/takeOne/([^/]++)(*:85)'
-                .'|/updateOne/([^/]++)(*:111)'
-                .'|/lucky/number/([^/]++)(*:141)'
+                .'|/cart/([^/]++)(?'
+                    .'|(*:59)'
+                .')'
+                .'|/giveMeOne/([^/]++)(*:86)'
+                .'|/takeOne/([^/]++)(*:110)'
+                .'|/updateOne/([^/]++)(*:137)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        61 => [[['_route' => 'app_getandpost_getone', '_controller' => 'App\\Controller\\GetAndPost::getOne'], ['id'], ['GET' => 0], null, false, true, null]],
-        85 => [[['_route' => 'app_getandpost_takeone', '_controller' => 'App\\Controller\\GetAndPost::takeOne'], ['id'], ['POST' => 0], null, false, true, null]],
-        111 => [[['_route' => 'app_getandpost_updateone', '_controller' => 'App\\Controller\\GetAndPost::updateOne'], ['id'], ['POST' => 0], null, false, true, null]],
-        141 => [
-            [['_route' => 'app_lucky_number', '_controller' => 'App\\Controller\\Lucky::number'], ['max'], null, null, false, true, null],
+        59 => [
+            [['_route' => 'app_cart_getcart', '_controller' => 'App\\Controller\\CartController::getCart'], ['uid'], ['GET' => 0], null, false, true, null],
+            [['_route' => 'app_cart_addproduct', '_controller' => 'App\\Controller\\CartController::addProduct'], ['uid'], ['POST' => 0], null, false, true, null],
+        ],
+        86 => [[['_route' => 'app_getandpost_getone', '_controller' => 'App\\Controller\\GetAndPost::getOne'], ['id'], ['GET' => 0], null, false, true, null]],
+        110 => [[['_route' => 'app_getandpost_takeone', '_controller' => 'App\\Controller\\GetAndPost::takeOne'], ['id'], ['POST' => 0], null, false, true, null]],
+        137 => [
+            [['_route' => 'app_getandpost_updateone', '_controller' => 'App\\Controller\\GetAndPost::updateOne'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
