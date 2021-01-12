@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Shopping;
+namespace App\Tests\Entity;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
